@@ -1,0 +1,76 @@
+<!--
+Task 5 (55 min) - Typography System
+152.​ Create typography.html demonstrating a complete type scale: set html { font-size: 62.5% } so
+1rem = 10px. Define sizes: 1.2rem, 1.4rem, 1.6rem, 1.8rem, 2.0rem, 2.4rem, 3.0rem, 3.6rem,
+4.8rem, 6.0rem
+153.​ Import two Google Fonts using @import in the CSS: a serif for headings and a sans-serif for
+body text. Add font-display: swap to prevent invisible text during load.
+154.​ Demonstrate font-weight variants: 300, 400, 500, 600, 700. Show which ones are synthetic (not
+a real font file) vs native.
+155. Set line-height as unitless (1.5) and letter-spacing and word-spacing values. Apply
+text-overflow: ellipsis with overflow: hidden and white-space: nowrap to create a text truncation
+effect.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography</title>
+    <link rel="stylesheet" href="5typography.css" type="text/css">
+</head>
+<body>
+    <main>
+        <h1>Typography</h1>
+        <section class="s152">
+            <h2>152</h2>
+<p id="a">1.2 rem</p>
+<p id="b">1.4 rem</p>
+<p id="c">1.6 rem</p>
+<p id="d">1.8 rem</p>
+<p id="e">2.0 rem</p>
+<p id="f">2.4 rem</p>
+<p id="g">3.0 rem</p>
+<p id="h">3.6 rem</p>
+<p id="i">4.8 rem</p>
+<p id="j">6.0 rem</p>
+
+        </section>
+
+        <section>
+            <h2>154</h2>
+
+<p id="a3">Font weight 300</p>
+<p id="a4">Font weight 400</p>
+<p id="a5">Font weight 500 SYNTHETIC</p>
+<p id="a6">Font weight 600</p>
+<p id="a7">Font weight 700</p>
+
+        </section>
+
+        <section id="s155">
+            <h2>155</h2>
+        <div>
+            Complex selectors
+
+They cascade only to thier chld elements and not upwards
+comnbinators are characters used to connect the css files
+
+1. Descendant combinator : uses ' '
+eg p em{ }; applies properties for all child of p which are em (margins also compund downward)
+
+2 Direct Child : uses '>'
+eg p>em {}  applies properties only to direct child of p
+
+3 NEXT SIBLING : uses '+'
+eg p+p.. all sibling of p which are p gets selected (!!not inner child)
+
+4 SUBSEQUENT SIBLING : uses '~'
+eg input:checked ~ .secret-box { } When the input gets checked subsequentally secret bos gets applied
+        </div>
+        </section>
+    </main>
+    
+</body>
+</html>

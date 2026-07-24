@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Merriweather',serif;
+}
+
+body{
+    font-family: 'Open Sans' sans-serif;
+}
+
+html { font-size: 62.5%;}
+
+#a{
+    font-size: 1.2rem;
+}
+#b{
+    font-size: 1.4rem;
+}
+#c{
+    font-size: 1.6rem;
+    color: blue;
+}
+#d{
+    font-size: 1.8rem;
+}
+#e{
+    font-size: 2.0rem;
+}
+#f{
+    font-size: 2.4rem;
+}
+#g{
+    font-size: 3.0rem;
+}
+#h{
+    font-size: 3.6rem;
+}
+#i{
+    font-size: 4.8rem;
+}
+#j{
+    font-size: 6.0rem;
+}
+
+#a3{
+    font-weight: 300;
+}
+#a4{
+    font-weight: 400;
+}
+#a5{
+    font-weight: 500;
+}
+#a6{
+    font-weight: 600;
+}
+#a7{
+    font-weight: 700;
+}
+
+#s155{
+    line-height: 1.5;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+}
+
+#s155 div{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-style: double;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+
+

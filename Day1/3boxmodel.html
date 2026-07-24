@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Deep Dive</title>
+    <link rel="stylesheet" href="3boxmodel.css" type="text/css">
+</head>
+<body>
+    <main>
+        <div class="div1"><h1>Content 1</h1></div>
+        <div class="div2"><h1>Content 2</h1></div>
+        <div class="div3"><h1>Content 3</h1></div>
+        <div class="container">
+        <div class="div4"><h1>Content 4</h1></div>
+        <div class="div5"><h1>Content 5</h1></div>
+            
+        <div class="div6"><h1>Content 6 = 300px</h1></div>
+        <div class="div7"><h1>Content 7 = 200px <br> border-sizing=border-box</h1></div>
+        </div>
+
+
+        <div class="div8"><h1>Content 8</h1><h2>BOTTOM MARGIN OF DIV 8 COLLAPSES WITH TOP MARGIN OF DIV 9 </h2></div>
+        <div class="div9"><h1>Content 9</h1><h2>THUS A 5vw IS ONLY EXISTING B/W 8 & 9 INSTEAD OF 10vw </h2></div>
+
+        <div class="div10"><h1>Content 10</h1></div>
+        <div class="div11"><h1>Content 11</h1></div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,358 @@
+Journal week 2 day 1
+----------------------------------------------------------------------------------
+
+This is the staring of css, so we need to cover the entire basics of css
+Reading core refernce module:
+
+web.dev - Learn CSS (full course)Bookmark this course. 
+Today: read the 'Box Model', 'Selectors',
+'Specificity', and 'Typography' modules.
+https://web.dev/learn/css
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+
+Covering four articles
+
+[ ARTICLE 1 ]
+
+Box Model   :   https://web.dev/learn/css/box-model
+The box model is a core foundational priciple
+
+Everything displayed by CSS is a box
+Sizing of the boxes, 
+Intrinsic Sizing as the size of th ebox (div,p,..) grows the content does not overflow
+this can be enforced by setting
+{
+    width: mincontent : the box will have the minium width of the content
+}
+
+I find the content confusing
+Referencing gemini..
+
+extrinsic sizing is when we define the size fixed :
+like {
+    width: 100px;
+    height : 100px;
+}
+this makes the css box rigid and content may overflow
+
+Intrinsic sizing : using css property we makes the boxes size more dynamic.. allowing 
+the content to expand
+
+mincontent : this attribute makes the boxes size = maximum word/contents width (vertical)
+maxcontent : this attribute makes the boxses size= as long / wide as its allowed or possible
+
+overflow keyword helps not to spill the content out of its box
+
+overflow : hidden (hides overflowed content)
+overflow : scroll (makes the content scrollable)
+overflow : break-word (breaks the longer word into smaller words)
+
+### Box model
+
+4 core concepts
+
+1. content box : where the content lives.. mincontent is a property controlling the content box
+2. padding box : space between the content and border, when we give overflow:scrll, scroll bar appears inside these padding box
+3. border box  : all the properties that we try to apply in the border 
+4. margin box  : all properties of the overall box wrt other boxes are controlled here
+
+you can denug the box model using box-debugger
+
+###  Content box
+
+display attribute decides how he box must behave
+display : block --> starts on a new line filling rest of the space available
+display : inline --> takes only as much space as its content
+display : inline-block --> like inline element but respects top and bottom margin
+
+actual size of block = padding and border * 2 + content
+box-sizing : border-box pushes the border , padding inside to the box
+
+[ ARTICLE 2 ]
+Selectors : https://web.dev/learn/css/selectors
+
+Selectors are used to target a specific elemennts of a class/id to give customized style
+Eg:
+
+.classname {
+    declarations;
+    property:value;
+
+    like -> color:red; 
+}
+
+Types of selectors
+-------------------
+Universal selsctor 
+*{
+    declarations applies for every element;
+}
+
+Type Selector
+article{
+    property:value; //applies those styles for all articles
+}
+
+Class selectors
+
+.classname{
+    apply declarations for all elements with same class
+}
+
+Idenetity selector
+#id_selector{
+    apply styles but since its id we can use it only one time
+}
+
+Attribute selector
+
+[data-type='primary' s/i]{
+    color red;
+    /* s and i makes the comparison of attributes case-sensitive/case-insensitive */
+}
+
+<div data-type="primary"></div>
+
+[href*='example.com']       *     checks if string is in the url
+[href^='example.com']       ^     checks if the url starts with the string
+[href$='.com']              $     check if the url ends with the string
+
+You can group multiple classes using ","
+
+p,div {color:red;}
+
+Pseudo selector and classes
+------------------------------
+
+eg:
+
+a:hover {
+    color:red;
+}
+
+p:nth child{
+    color:red;
+}
+a pseudo class is a element which is being interacted with something
+hover , when whe mouse hovers 
+child , the count of the element padding
+
+A pseudo element can be used to target a specifiic element or can be used to insert 
+an element before or after an element
+
+li::marker{
+    color:red
+}
+
+Complex selectors
+-----------------
+They cascade only to thier chld elements and not upwards
+comnbinators are characters used to connect the css files
+
+1. Descendant combinator : uses ' '
+eg p em{ }; applies properties for all child of p which are em (margins also compund downward)
+
+2 Direct Child : uses '>'
+eg p>em {}  applies properties only to direct child of p
+
+3 NEXT SIBLING : uses '+'
+eg p+p.. all sibling of p which are p gets selected (!!not inner child)
+
+4 SUBSEQUENT SIBLING : uses '~'
+eg input:checked ~ .secret-box { } When the input gets checked subsequentally secret bos gets applied
+
+Compound selectors
+You can combine selectors to increase specificity and readability. For example, to target <a> elements, that also have a class of .my-class, write the following:
+
+
+
+[ ARTICLE 3 ]
+Specificity : https://web.dev/learn/css/specificity
+
+If multiple styles are applied on same element, which style must be chosen?
+This is dealt by specificity
+
+Specificity is a triad of scores
+ (  A   B   C )
+Where 
+A  -> id like specificity
+B  -> class like specificity
+C   -> element like specificity
+
+SO WHEN STYLES CLASH, THESE TRAIDS ARE COMPARED
+1st A is compared, if it tied then B then C
+
+no specificity
+    *{} and :not().. (arguments can also add specificity)
+
+
+type or pseudo elements add specificity to C 
+    div {} or ::selection ...
+
+Class, Pseudo Class or Attribute selector add to B
+    .class{} or button:hover{} or href$=['.com']
+
+id adds to A
+    #property{ }
+
+
+if specificity is tied the TIE BREAKER IS THE SOURCE ORDER LAST FORMATTING WINS
+
+
+
+
+[ ARTICLE 4 ]
+
+Text and Typography rules : https://web.dev/learn/css/typography
+
+@font-face rule helps us to download a font from remote server or form user device
+ it has many attributes like , font-size, font-familiy, font-style...
+ https://web.dev/learn/css/typography?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Ftypography#descriptors
+
+!! src attribute is required for this @font face rule
+@font-face{
+
+font-family : "Trickster"; 
+    
+ src:
+    local("Trickster"),
+    url("trickster-COLRv1.otf") format("opentype");
+
+}
+
+url is for font styles from the remote servers
+local is the falllback from the user device
+
+Note: @font-face can't be declared inside a CSS selector block.
+
+@font-face vs font-family
+
+font-face   : Rule used to define custom fonts.. where to download, how to display
+font-family : It is a css proprty to implement a style for the Text
+font-style  : only 3 values , normal , italic , oblique
+font-weight : VALUES can be keywords like normal,bold=(400,700) (lighter,bolder) and accepts values from (100 to 900)
+font-size   : It accepts absolute keywords (xx-small, x-small, small, medium, large, x-large,xx-large).. (relative keyword values)
+              1em (1 times the size of parent classes font) , 1rem (1 times the size of the root class font)
+
+line-height : to change the space between the lines
+letter-spacing : hi,  h i,h  i (add em values)
+word-spacing   : hi hello, hi   hello (add em values)
+
+text-decoration : Add lines to text
+text-decoration-line  : (underline,strikethrough,overline or a combination )
+text-decoration-color : add color
+text-decoration-style : double,wavy,dotted,dashed
+text-decoration-thickness : 10% = 0.1em
+
+text-indent   :   to add an indent to your blocks of text (default text-indent:0px)
+text-overflow : clip (as you lear) cliped at r , ellipsis (as you l...)
+
+white-space : how white-space is handled (normal, pre pre-wrap,nowrap,preline,break-spaces)
+word-break : normal (words are not broken) break-all (words will break at the end of the container)
+
+text-align : left , center, right , justify [start and end , eg for arabic start is right]
+
+overflow : wrap (default) no-wrap , balance (maximum uniform characters in each line)
+           stable when contenteditable="true" use stable
+overflow-wrap : normal (no break unless space) , break-word, anywhere (adds breakpoints,reponds differently to minlength)
+
+writing-mode : horizontal-tb (default) .. vertical-lr and vertical-rl
+
+text-shadow : x-offset,y-offset,blur-radius
+
+text-transform : Capitialize
+
+Completed 
+CSS Diner - selector challenges (25/25)
+
+Moving to task 1
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+Done
+Moving to task 2
+
+learnt that two styles of same specificity when applied directly and via a parent , in 
+such case the direct targeting wins over inheritence 
+
+Moving to Task 3
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+Learnt about margin collapsing
+a special feature in which the top and bottom margins collapse to the larger values between them
+
+Also negative margins were attempted and divs overlapped with each other!!
+
+Moving to TASK 4
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+Learnt about css design systems and how to implement themes.
+Implmeted styles and colors in 4index.html
+
+Moving to TASK 5
+Learned impart statemnt
+
+In task 6 :
+properties like background-image, background-size, background-repeat , box-shadow 
+were new , they are understood
+
+Completing todays work
+
+Drafting mail
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+Starting Task 7 at day 2,8:35:17 AM
+
+COunters are variables maintained by css whose values can be incremented or decremented froma previous sibling
+
+1. counters are inherited from parent
+2. counter-reset : section ; //default value is 0 --> conuter-reset : page 3; //value is 3
+3. Counters are incremented using counter-increment property. // 
+counter-increment : section; default = 0
+4. counter-set: section 20; // sets the counter section's value to 20
+5. content:counter(name); gives us our required content
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+Moving to Task 8
+
+Learnt about custom attribute and retriving data using attr() function
+::before element makes the element before the parent element
+experimented with absolute and relative positions
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+Completed Task 8
+END-OF-DAY SELF-CHECK - TICK EVERY BOX BEFORE YOU LOG OFF:
+□​ I can predict the result of a specificity conflict without running the code
+□​ I understand box-sizing: content-box vs border-box and set border-box as the global default
+□​ I can define and consume CSS custom properties with fallback values
+□​ I have set up a type scale using rem with html { font-size: 62.5% }□​ I know the difference between :focus and :focus-visible
+
+I can confirm that i have implemented and learned these concepts
+
+
+DAILY JOURNAL - WRITE YOUR ANSWERS IN YOUR LEARNING JOURNAL:
+•​ Why is box-sizing: border-box almost always the better choice? When would you NOT use it?
+Because as we develop and evolve our website our overall height and width will be fixed, we don't want the layout to be changed as we change maybe the size of the border or maybe adding extra padding. We would not use border box in situation where we don't want the content box to be constricted further or when we can tolerate sufficient changes to the boxes. 
+
+
+•​ What is the difference between :focus and :focus-visible, and why does it matter for keyboard users?
+:focus focuses or applies the style we define when the keyboard user simply enters or focuses the element, but :focus-visible is more intelligent and by default behavior it does not applies styles to elements in which we cannot enter data. 
+
+•​ What is one thing you want to look up more deeply tomorrow?
+Further cs properties.
+
+Not by skills,But by grace..
+Thank you Jesus..

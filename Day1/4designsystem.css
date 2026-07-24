@@ -1,0 +1,99 @@
+:root {
+  --color-primary-hex: #2563eb;
+  --color-primary-rgb: rgb(37, 99, 235);
+  --color-primary-hsl: hsl(221, 83%, 53%);
+  --color-primary-oklch: oklch(52% 0.22 264);
+
+  --color-primary: var(--color-primary-hex);
+
+  --color-secondary: #0f172a; 
+  --color-accent: #f59e0b; 
+  --color-success: #16a34a; 
+  --color-warning: #d97706; 
+  --color-error: #dc2626;
+
+  --color-text: #0f172a; 
+  --color-bg: #ffffff; 
+
+  --color-primary-tint-2: oklch(92% 0.05 264); 
+  --color-primary-tint-1: oklch(75% 0.14 264); 
+  --color-primary-base: oklch(52% 0.22 264); 
+  --color-primary-shade-1: oklch(40% 0.18 264); 
+  --color-primary-shade-2: oklch(28% 0.12 264); 
+}
+
+[data-theme='dark'] {
+  --color-text: #f8fafc;
+  --color-bg: #0f172a;
+
+  --color-primary-hex: #60a5fa;
+  --color-primary-rgb: rgb(96, 165, 250);
+  --color-primary-hsl: hsl(213, 94%, 68%);
+  --color-primary-oklch: oklch(70% 0.16 250);
+
+  --color-primary: var(--color-primary-hex);
+
+  --color-secondary: #cbd5e1;
+  --color-accent: #fbbf24;
+  --color-success: #4ade80;
+  --color-warning: #fde047;
+  --color-error: #f87171;
+
+  --color-primary-tint-2: oklch(20% 0.08 264);
+  --color-primary-tint-1: oklch(32% 0.12 264);
+  --color-primary-base: oklch(70% 0.16 250);
+  --color-primary-shade-1: oklch(80% 0.12 250);
+  --color-primary-shade-2: oklch(90% 0.08 250);
+}
+
+body {
+  font-size: 1.125rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+a {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-success);
+}
+
+h1 {
+  text-align: center;
+}
+
+hr {
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: var(--color-secondary);
+}
+
+.features em {
+  color: var(--color-secondary);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+}
+
+.features h3 {
+  color: var(--color-accent);
+}
+
+.testimonials h2 {
+  color: var(--color-primary);
+}

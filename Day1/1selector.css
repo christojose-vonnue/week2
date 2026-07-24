@@ -1,0 +1,78 @@
+[type='email'] {
+    color : rgb(28, 155, 39);
+    font-size: 1.2em;
+}
+
+.card,.featured{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.card{
+    word-spacing: 1.2em;
+}
+
+.featured{
+    
+    text-decoration-line: underline;
+    text-decoration-color: rgb(137, 38, 170);
+    text-decoration-thickness: 0.5ex;
+}
+
+.emaill{
+    margin-top: 2vw;
+    margin-bottom:2vw;
+    
+}
+
+ul li:nth-child(even){
+    text-indent: 5px;
+    font-weight: 700;
+    color: brown;
+}
+
+article p:first-of-type{
+    font-style: oblique;
+}
+
+h2+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration-line: line-through;
+}
+
+a:hover{
+    font-style: italic;
+}
+
+a:focus{
+    font-size: large;
+    font-weight: bold;
+}
+
+ul li:first-child{
+    text-align: right;
+}
+
+ul li:last-child{
+    text-align: center;
+}
+
+article :nth-child(3n+1){
+    text-transform: capitalize;
+}
+
+p::before {
+  content: "<::before >";
+  text-decoration-line: underline;
+  text-decoration-color: blue ;
+}
+
+p::after{
+    content: " < ::after>";
+    text-decoration-line: underline;
+  text-decoration-color: blue ;
+}
+
+[href^='https']{
+    color: rgb(5, 138, 255);
+}

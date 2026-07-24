@@ -1,0 +1,51 @@
+<!--
+160.​ Create pseudo.html and build a navigation bar using :hover and :focus-visible (not :focus) for
+interactive states - add a comment explaining the difference
+161.​ Build a custom styled checkbox: hide the default input[type=checkbox] with appearance: none,
+recreate a checkmark using ::before on a label that is displayed when :checked
+162.​ Build a numbered list using CSS counters: counter-reset on the ol, counter-increment on li, and
+content: counter() in a ::before pseudo-element
+163.​ Build a pure CSS tooltip: position::after as absolute, toggle it visible with :hover on the parent.
+The tooltip text comes from a data-tooltip attribute using attr()
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes & Pseudo-Elements</title>
+    <link href="7pseudo.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    
+        <header>
+        <nav>
+            <div><a href="#7pseudo.css" target="_blank">Tab 1</a></div>
+            <div><a href="#7pseudo.css" target="_blank">Tab 2</a></div>
+            <div id="a"><label for="s">Search Tab </label><input type="text" id="s"></div>
+        </header>
+    </nav>
+
+    <main>
+        <p> :hover implies the style when the mouse points to it, :focus-visible only focuses when we select it</p>
+        
+        <!--Not complete-->
+        <label for="fah">Dummy </label>
+        <input type="checkbox" id="fah">
+        <p>List of even numbers</p>
+        <ol>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ol>
+
+        <div class="tool" data-tooltip="Bingo!!"><h1>Hover here to see tool tip</h1></div>
+
+    </main>
+    
+</body>
+</html>

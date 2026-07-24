@@ -1,0 +1,50 @@
+nav div{
+    display: inline-block;
+    background-color: antiquewhite;
+    width: 20vw;
+    height: 4vw;
+    border : double 2px blueviolet;
+    padding: 2px;
+    text-align: center;
+    margin-left: 0px;
+}
+
+nav div a:hover{
+    color: red;
+}
+
+input[type='checkbox']{
+    appearance: none;
+    width:18px;
+    height: 18px;
+    border: solid 2px #555;
+    position:relative;
+
+}
+
+input[type='checkbox']:checked::before{
+    content: "✔";
+}
+
+ol{
+        
+    counter-reset: ol 0;
+}
+
+li{
+    counter-increment: ol 2;
+    
+}
+
+li::before{
+    content: counter(ol);
+}
+
+.tool:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    border: solid 2px black;
+    background-color: #555;
+    color: aliceblue;
+    transform: translateX(18vw) translateY(-2vw);
+}

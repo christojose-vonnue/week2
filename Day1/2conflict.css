@@ -1,0 +1,70 @@
+p{
+    font-size: large;
+}
+
+ol li{
+
+    font-size: x-large;
+}
+
+/*One*/
+body {
+    color:aqua;
+}
+
+/*Two*/
+
+*{
+    color:red !important;
+}
+
+/* 15 */
+*{
+    color:rgb(0, 0, 0) !important;
+}
+
+/* 3 */
+
+body *{
+    color: brown;
+}
+
+/* 4 */
+
+h1 {
+    color: rgb(113, 15, 98);
+}
+
+/* 5 */
+main h1{
+    color :black ; 
+}
+
+/* 6 */
+.header{
+    color: rgb(7, 60, 233);
+}
+
+/* 7 */
+.mains h1{
+    color :rgb(113, 15, 98);
+}
+
+/* 8 */
+#target{
+    color: chocolate;
+}
+
+/* 10  */
+
+h1#target{
+    color :rgb(2, 65, 7)
+}
+
+h1:is(#target,.mains){
+    color:tomato
+}
+
+.mains .header#target{
+    color :rgb(33, 78, 97)
+}

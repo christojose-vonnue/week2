@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflict</title>
+    <link href="2conflict.css" rel="stylesheet" type="text/css">
+    <style>
+        h1{
+            color: blueviolet;
+        }
+        
+    </style>
+</head>
+<body>
+    <main class="mains">
+    <h1 class="header" id="target" style="color:blue" >This is our target</h1>
+
+    <ol>
+        <li>universal selector (*) Targets h1, gives it a red color (0,0,0)</li>
+        <li>body targets h1 , but is supressed : <em>because universal tag directly targets h1 but h1 is a 
+            child of body , therefore {*} wins </em> </li>
+        <li>
+            <pre><code>
+main *{
+    color: brown;
+}
+            </code></pre> overrides previous styles, as now we are directly targeting along with body, (0,0,0,1)
+        </li>
+
+        <li>
+            <pre><code>
+h1 {
+    color: rgb(113, 15, 98);
+}</code></pre> overrides previous styles, as now we are directly targeting along with h1 (0,0,0,1), This style is tied with previous, so since this appears the last, 4 wins over 3
+        </li>
+
+         <li>
+            <pre><code>
+main h1{
+    color :black;
+}</code></pre> overrides previous styles, because now we are targeting with two types , main and h1 increasing the accessibilty to (0,0,0,2) winning  over 4
+        </li>
+
+         <li>
+            <pre><code>
+h1 class="header"This is our target/h1
+.header{
+    color: rgb(7, 60, 233);
+}</code></pre> 
+overrides previous styles, because now we are targeting with a class so accessibilty is (0,1,0) over (0,0,2) thus overridding 5
+        </li>
+
+         <li>
+            <pre><code>
+.mains h1{
+    color :rgb(113, 15, 98);
+}</code></pre> 
+overrides previous styles, because now we are targeting with a class along with a type so accessibilty is (0,1,1) over (0,1,0) thus overridding 6
+        </li>
+
+         <li>
+            <pre><code>
+#target{
+    color: chocolate;
+}</code></pre> 
+overrides previous styles, because now we are targeting with a id  so accessibilty is (1,0,0) over (0,1,1) thus overridding 7
+        </li>
+
+        <li>
+            <pre><code>
+style
+    h1{
+        color: blueviolet;
+    }
+    
+/style</code></pre> 
+previous style suppressed style tag in head section , because both stylesheet with link and style on head have same priority
+        </li>
+
+<li>
+    <pre><code>
+h1#target {
+    color: rgb(2, 65, 7);
+}</code></pre> 
+    overrides previous style (#target), because h1#target has a specificity 
+    score of (1,0,1) which beats (1,0,0) from #target alone.
+</li>
+
+<li>
+    <pre><code>
+h1:is(#target,.mains){
+    color:tomato
+}</code></pre> 
+    overrides previous style (#target), because is extracts highest specificity reteiving (1,0,0) .. so by source order lastest style will work
+</li>
+
+<li>
+    <pre><code>
+.mains .header#target{
+    color :rgb(33, 78, 97)
+}</code></pre> 
+    overrides previous style (h1:is(#target,.mains)), because it has two classes making specificity (1,2,0).. 
+</li>
+        <li>
+            <pre><code>
+h1 class="header" id="target" style="color:blue"</code></pre> 
+overrides previous style as inline style tag in h1 , because inline style tag has higher priority than stylesheet with link thus overriding 
+        </li>
+
+                <li>
+            <pre><code>
+*{
+    color:red !important;
+}</code></pre> 
+overrides previous style as !important is valid  , <cite>!important at the end of a CSS declaration does not affect specificity but puts the declaration in a different origin, namely Authored !important </cite>
+        </li>
+
+       
+
+                <li>
+            <pre><code>
+/*Two*/
+
+*{
+    color:red !important;
+}
+
+/* 15 */
+*{
+    color:rgb(0, 0, 0) !important;
+}</code></pre> 
+overrides previous style as !important, both have same priority so source order wins
+
+<!--
+        
+
+
+-->
+    </ol>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
