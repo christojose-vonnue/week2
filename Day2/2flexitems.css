@@ -1,0 +1,213 @@
+/**** flexgrow:0, flexshrink:1 ****/
+
+.container{
+    display : flex;
+    border : solid 2px brown;
+    padding : 5px;
+    
+    margin-top: 2vw;
+    
+    flex-wrap: wrap;
+        
+}
+
+.master{
+ margin-top: 2vw;
+ border : solid 2px rgb(148, 5, 148);
+ padding: 2vw;
+ max-width: 25vw;
+}
+
+.child{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-grow: 0;
+    
+}
+
+/**** flexgrow:1 ****/
+
+.master1{
+ margin-top: 2vw;
+ border : solid 2px rgb(148, 5, 148);
+ padding: 2vw;
+ max-width: 25vw;
+}
+.container1{
+    display : flex;
+    border : solid 2px brown;
+    padding : 5px;
+    
+    margin-top: 2vw;
+    
+    flex-wrap: wrap;
+        
+}
+
+.child1{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-grow: 0;
+    
+}
+.child2{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-grow: 1;
+    
+}
+
+.child3{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-grow: 2;
+}
+.child4{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-grow: 1;
+}
+.child5{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-grow: 0;
+    
+}
+
+/***************/
+.containerfix{
+    display : flex;
+    border : solid 2px brown;
+    padding : 5px;
+    
+    margin-top: 2vw;
+    max-width: 300px;
+    flex-wrap: nowrap;
+        
+}
+
+.child6{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-shrink: 0;
+    
+}
+.child7{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-shrink: 1;
+    
+}
+
+.child8{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-shrink: 2;
+    
+}
+
+.childbasis{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-shrink: 8;
+    background-color: rgb(255, 234, 231);
+    width: 100px;
+    height: 100px;
+    
+    
+}
+
+.childbasis0{
+    padding : 2px;
+    border: solid 2px rgb(30, 128, 11);
+    flex-shrink: 8;
+    background-color: rgb(255, 111, 89);
+    width: 100px;
+    height: 100px;
+    flex-basis: 0;
+    
+    
+}
+
+/* Basis */
+
+#bauto{
+    flex-basis: auto;
+    background-color: rgb(85, 83, 83);
+
+}
+#px200{
+    flex-basis: 200px;
+    background-color: rgb(82, 148, 45);
+
+}
+
+#per33{
+    flex-basis: 33.33%;
+    background-color: rgb(4, 26, 99);
+
+}
+
+#one{
+    background-color: violet;
+    min-width: 50px;
+    min-height: 50px;
+    order: 5    ;
+
+}
+#two{
+    background-color: indigo;
+    min-width: 50px;
+    min-height: 50px;
+    order:1;
+}
+#three{
+    background-color: blue;
+    min-width: 50px;
+    min-height: 50px;
+    order:3;
+}
+#four{
+    background-color: green;
+    min-width: 50px;
+    min-height: 50px;
+    order:2;
+}
+#five{
+    background-color: yellow;
+    min-width: 50px;
+    min-height: 50px;
+    order:4;
+}
+.clcontainer {
+  display: flex;
+  align-items: flex-start;
+  height: 200px;
+  border: 2px solid brown;
+  background-color: #fdf6ec;
+  gap: 20px;
+  padding: 20px;
+}
+
+.clchild {
+  width: 60px;
+  align-self: center;
+  height: 60px;
+  background-color: rgb(30, 128, 11);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.clspecial {
+  align-self: flex-end;
+  background-color: rgb(215, 90, 40);
+}
+
+p {
+  max-width: 500px;
+  font-family: sans-serif;
+  margin-top: 16px;
+}

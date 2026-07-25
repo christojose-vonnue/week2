@@ -1,0 +1,58 @@
+.required{color:rgb(134, 10, 10);}
+
+.multiple-flex-rows{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex: 1;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+label{
+    max-width: 180px;
+}
+
+#buttons-on-right{
+    justify-content: flex-end;
+    gap : 30px
+}
+
+
+#submit-button:hover{
+    background-color: antiquewhite;
+    border: solid 1.5px rgb(208, 211, 18);
+}
+input:user-invalid {
+  border: 2px solid red;
+  background-color: beige;
+}
+
+.highlight{
+    display: none;
+     color: red;
+    margin-top: 4px; 
+    
+}
+
+input:user-invalid ~ .highlight{
+   
+    display: block;
+}
+
+input:focus-visible{
+    outline: solid 2px rgb(231, 217, 15);
+}   
+
+@media screen and (max-width:600px){
+    .multiple-flex-rows{
+    display: flex;
+    flex-direction: column;}
+
+    .flex-row-2-colum-pair{ 
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+

@@ -1,0 +1,136 @@
+.master{
+    max-height: 600px;
+    max-width: 400px;
+    border : solid 2px black;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.master-vertical-block{
+    max-height: 600px;
+    max-width: 400px;
+    border : solid 2px black;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.forimagecentering{
+    display: flex;
+    justify-content: center;
+}
+
+#title{
+    text-align: center;
+    margin-top :10px;
+}
+
+#description{
+    text-align: center;
+}
+
+.tags{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.specialfooter{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.forimagecentering-horizontal{
+    flex-direction: column;
+    max-width: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.master-horizontal{
+    display: flex;
+    border : solid 2px black;
+    max-height: 400px;
+    max-width: max-content;
+    padding-right: 10px;
+
+}
+
+@media (width<600px){
+    .master-horizontal{
+        display: none;
+    }
+
+    .master{
+        display: block;
+    }
+}
+
+.row-oriented-flex{
+    display: flex;
+   /*  border: solid 0.5px rgb(255, 254, 254); */
+    gap:60px;
+    margin: 20px;
+}
+
+.overall-flex-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex : 1 1 calc(33.333% - 2rem);
+    border: dashed 1px red;
+
+}
+
+
+@media only screen and (max-width: 400px){
+    #phone{
+        display: flex;
+    }
+    #tablet{
+        display: none;
+    }
+    #desktop{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 480px){
+    #phone{
+        display: flex;
+    }
+    #tablet{
+        display: none;
+    }
+    #desktop{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+    #phone{
+        display: none;
+    }
+    #tablet{
+        display: flex;
+    }
+    #desktop{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #phone{
+        display: none;
+    }
+    #tablet{
+        display: none;
+    }
+    #desktop{
+        display: flex;
+    }
+}

@@ -1,0 +1,214 @@
+/* 
+
+Task 1 (35 min) - Every Container Property
+168.​ Create flexbox.html with a nine-item flex container. 
+Demonstrate every justify-content value with
+eight items: flex-start, flex-end, center, space-between,
+ space-around, space-evenly
+169.​ Demonstrate every align-items value: 
+stretch, flex-start, flex-end, center,
+ baseline - 
+ make
+baseline visible by giving items different 
+font sizes
+
+170.​ Demonstrate align-content on a wrapped 
+container with fifteen items 
+(requires flex-wrap: wrap):
+flex-start, flex-end, center, 
+space-between, space-around, stretch
+
+171.​ Demonstrate flex-direction: row, row-reverse
+, column, column-reverse on separate containers
+*/
+
+.containerbig{
+    display : flex;
+    border : solid 2px brown;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 2vw;
+     height: 700px;  
+    
+}
+
+.container{
+    display : flex;
+    border : solid 2px brown;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 2vw;
+    
+    
+}
+
+.child{
+    padding : 20px;
+    margin-right: 3vw;
+    border: solid 2px rgb(30, 128, 11);
+    height: min-content;
+}
+
+.child2{
+    padding : 20px;
+    margin-right: 3vw;
+    border: solid 2px rgb(30, 128, 11);
+    
+}
+
+.container h1{
+    display: flex;
+    color: blue;
+    border: solid 2px rgb(145, 239, 255);
+    outline: solid 2px rgb(215, 145, 255);
+    padding: 10px;
+    margin-right: 100vw;
+    min-width: 500px;
+}
+
+.master{
+ margin-top: 2vw;
+ border : solid 2px rgb(255, 255, 255);
+ padding: 2vw;
+}
+
+h1{
+    text-align: center;
+}
+
+/******************************************/
+#center{
+    justify-content: center;
+}
+
+#center h1{
+    flex-wrap: wrap;
+}
+
+#flex-start{
+    justify-content: flex-start;
+}
+
+#flex-end{
+    justify-content: flex-end;
+}
+
+#space-between{
+    justify-content: space-between;
+}
+
+#space-around{
+    justify-content: space-around;
+}
+
+#space-evenly{
+    justify-content: space-evenly;
+}
+
+/******************************************/
+
+#vertical{
+    writing-mode:vertical-lr;
+    text-orientation: upright;
+}
+
+/******************************************/
+#stretch1{
+    align-items: stretch;
+}
+#flex-start1{
+    align-items: flex-start;
+}
+#flex-end1{
+    align-items: flex-end;
+}
+#center1{
+    align-items: center;
+}
+#baseline1{
+    align-items: baseline;
+}
+
+#f3{
+    font-size: xx-small;
+}
+#f4{
+    font-size: x-small;
+}
+#f5{
+    font-size: small;
+}
+#f6{
+    font-size:large;
+}
+#f7{
+    font-size:x-large;
+}
+#f8{
+    font-size:xx-large;
+}
+#f9{
+    font-size:large;
+}
+
+/******************************************/
+.master1{
+ margin-top: 9vw;
+ 
+ padding: 2vw;
+ max-width: 400px;
+ max-height: 700px;
+}
+.master1 .child{
+    padding : 20px;
+    margin-right: 5px;
+    border: solid 2px rgb(0, 0, 0);
+  
+}
+
+#center2{
+    align-content: center;
+}
+
+
+#flex-start2{
+    align-content: flex-start;
+}
+
+#flex-end2{
+    align-content: flex-end;
+}
+
+#space-between2{
+    align-content: space-between;
+}
+
+#space-around2{
+    align-content: space-around;
+}
+
+#space-evenly2{
+    align-content: space-evenly;
+}
+/*********
+flex-direction: row, row-reverse, column, column-reverse on separate containers
+
+
+*********************************/
+
+#row{
+    flex-direction: row;
+}
+
+#row-reverse{
+    flex-direction: row-reverse;
+}
+
+#column{
+    flex-direction: column;
+}
+
+#column-reverse{
+    flex-direction: column-reverse;
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Row</title>
+    <link href="2flexitems.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="master">
+    <h1><code>No flex grow</code></h1>
+    <div class="container" id="center">  
+        <div class="child">111111</div>
+        <div class="child">2nd</div>    
+        <div class="child">Third</div>
+        <div class="child">4th</div>
+        <div class="child">5thh</div>    
+   
+    </div>  
+</div>
+
+<div class="master1">
+    <h1><code>flex-grow : 0 1 2 1 0</code></h1>
+    <div class="container1" id="center">  
+        <div class="child1">111111</div>
+        <div class="child2">2nd</div>    
+        <div class="child3">Third</div>
+        <div class="child4">4th</div>
+        <div class="child5">5thh</div>    
+   
+    </div>  
+</div>
+
+<div class="master">
+    <h1><code>No flex shrink</code></h1>
+    <div class="containerfix" id="center">  
+        <div class="child6"><p>Vonnue delivered the Global Mobility Leader platform, a multi-service super-app combining ride-hailing, 
+            on-demand food delivery, and integrated digital payments.</p></div>
+        <div class="child6">2nd</div>    
+        <div class="child6">Third</div>
+        <div class="child6">4th</div>
+        <div class="child6">5thh</div>    
+   
+    </div>  
+</div>
+
+<div class="master">
+    <h1><code> flex shrink 1</code></h1>
+    <div class="containerfix" id="center">  
+        <div class="child7"><p>Vonnue delivered the Global Mobility Leader platform, a multi-service super-app combining ride-hailing, 
+            on-demand food delivery, and integrated digital payments.</p></div>
+        <div class="child7"><p>Vonnue delivered the Global Mobility Leader platform</p></div>    
+        <div class="child7">Third</div>
+        <div class="child7">4th</div>
+        <div class="child7">5thh</div>    
+   
+    </div>  
+</div>
+
+<div class="master">
+    <h1><code>Flex Basis</code></h1>
+    <div class="containerfix" id="center">  
+        
+        <div class="childbasis0"></div>    
+        <div class="childbasis" id="bauto"></div>
+        <div class="childbasis" id="px200"></div>
+        <div class="childbasis" id="per33"></div> 
+    </div>  
+</div>
+
+<div class="master">
+    <h1><code>Flex Basis</code></h1>
+    <div class="containerfix" id="center">  
+        
+        <div class="childbasis0"></div>   
+        <div class="childbasis" id="bauto"></div>
+        <div class="childbasis" id="px200"></div>
+        <div class="childbasis" id="per33"></div>
+            
+   
+    </div>  
+</div>
+
+<div class="container">
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+</div>
+
+<div class="clcontainer">
+  <div class="clchild">1</div>
+  <div class="clchild clspecial">2</div>
+  <div class="clchild">3</div>
+</div>
+
+<p>Item 2 has <code>align-self: flex-end</code>, which overrides the container's <code>align-items: flex-start</code> just for that one item, item 2 sinks to the bottom while items 1 and 3 stay pinned to the top.</p>
+
+</body>
+</html>

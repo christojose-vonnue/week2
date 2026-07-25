@@ -1,0 +1,58 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-header {
+    min-height: 15vh;
+    background-color: plum;
+}
+
+.columns {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar-left {
+    flex: 0 0 200px;
+    background-color: rgb(154, 241, 154);
+}
+
+.main-content {
+    flex: 1;
+    background-color: rgb(54, 54, 107);
+}
+
+.sidebar-right {
+    flex: 0 0 150px;
+    background-color: rgb(8, 8, 230);
+}
+
+.site-footer {
+    min-height: 15vh;
+    background-color: antiquewhite;
+}
+
+@media (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+    }
+    .main-content {
+        order: 1;
+    }
+    .sidebar-left {
+        order: 2;
+    }
+    .sidebar-right {
+        order: 3;
+    }
+}

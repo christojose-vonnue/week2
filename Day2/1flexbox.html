@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link href="1flexbox.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <main>
+
+    <!--
+<div class="container">
+    <h1>Nine item container</h1>
+    <div class="child">1</div>
+    <div class="child">2</div>    
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>    
+    <div class="child">6</div> 
+    <div class="child">7</div>
+    <div class="child">8</div>    
+    <div class="child">9</div>    
+</div>
+
+<div class="master">
+    <h1><code>justify-items:center;</code></h1>
+    <div class="container" id="center">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>justify-items:flex-start;</code></h1>
+    <div class="container" id="flex-start">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>justify-items:flex-end;</code></h1>
+    <div class="container" id="flex-end">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>justify-items:space-between;</code></h1>
+    <div class="container" id="space-between">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>justify-items:space-around;</code></h1>
+    <div class="container" id="space-around">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>justify-items:space-evenly;</code></h1>
+    <div class="container" id="space-evenly">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+-->
+
+<!--
+<div class="master">
+    <h1><code>align-items: stretch;</code></h1>
+    <div class="container" id="stretch1">
+        
+        
+        <div class="child" id=vertical>LEARNING</div>
+        <div class="child2">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>align-items:  flex-start;</code></h1>
+    <div class="container" id="flex-start1">
+        
+        
+        <div class="child" id=vertical>LEARNING</div>
+        <div class="child2">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>align-items:  flex-end;</code></h1>
+    <div class="container" id="flex-end1">
+        
+        
+        <div class="child" id=vertical>LEARNING</div>
+        <div class="child2">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>align-items:  center;</code></h1>
+    <div class="container" id="center1">
+        
+        
+        <div class="child" id=vertical>LEARNING</div>
+        <div class="child2">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code>align-items:  baseline;</code></h1>
+    <div class="container" id="baseline1">
+        
+        
+        <div class="child" id=vertical>LEARNING</div>
+        <div class="child2">2</div>    
+        <div class="child" id="f3">3</div>
+        <div class="child" id="f4">4</div>
+        <div class="child" id="f5">5</div>    
+        <div class="child" id="f6">6</div> 
+        <div class="child" id="f7">7</div>
+        <div class="child" id="f8">8</div>    
+        <div class="child" id="f9">9</div>    
+    </div>
+</div>
+-->
+
+<!--
+
+<div class="master1">
+    <h1><code>align-content:center;</code></h1>
+    <div class="containerbig" id="center2">
+        
+        
+        <div class="child">1000000000</div>
+        <div class="child">22</div>    
+        <div class="child">3222222</div>
+        <div class="child">4sww</div>
+        <div class="child">5sssssssss</div>    
+        <div class="child">6</div> 
+        <div class="child">7ssss</div>
+        <div class="child">8aaaa</div>    
+        <div class="child">9</div>
+        <div class="child">1s0</div> 
+        <div class="child">11</div>   
+        <div class="child">12</div> 
+        <div class="child">13s</div> 
+        <div class="child">14s</div> 
+        <div class="child">15</div> 
+    </div>
+</div>
+
+<div class="master1">
+    <h1><code>align-content: flex-start;</code></h1>
+    <div class="containerbig" id="flex-start2">
+        
+        
+        <div class="child">1000000000</div>
+        <div class="child">22</div>    
+        <div class="child">3222222</div>
+        <div class="child">4sww</div>
+        <div class="child">5sssssssss</div>    
+        <div class="child">6</div> 
+        <div class="child">7ssss</div>
+        <div class="child">8aaaa</div>    
+        <div class="child">9</div>
+        <div class="child">1s0</div> 
+        <div class="child">11</div>   
+        <div class="child">12</div> 
+        <div class="child">13s</div> 
+        <div class="child">14s</div> 
+        <div class="child">15</div> 
+    </div>
+</div>
+
+<div class="master1">
+    <h1><code>align-content: flex-end;</code></h1>
+    <div class="containerbig" id="flex-end2">
+        
+        
+        <div class="child">1000000000</div>
+        <div class="child">22</div>    
+        <div class="child">3222222</div>
+        <div class="child">4sww</div>
+        <div class="child">5sssssssss</div>    
+        <div class="child">6</div> 
+        <div class="child">7ssss</div>
+        <div class="child">8aaaa</div>    
+        <div class="child">9</div>
+        <div class="child">1s0</div> 
+        <div class="child">11</div>   
+        <div class="child">12</div> 
+        <div class="child">13s</div> 
+        <div class="child">14s</div> 
+        <div class="child">15</div> 
+    </div>
+</div>
+
+
+<div class="master1">
+    <h1><code>align-content: space-between;</code></h1>
+    <div class="containerbig" id="space-between2">
+        
+        
+        <div class="child">1000000000</div>
+        <div class="child">22</div>    
+        <div class="child">3222222</div>
+        <div class="child">4sww</div>
+        <div class="child">5sssssssss</div>    
+        <div class="child">6</div> 
+        <div class="child">7ssss</div>
+        <div class="child">8aaaa</div>    
+        <div class="child">9</div>
+        <div class="child">1s0</div> 
+        <div class="child">11</div>   
+        <div class="child">12</div> 
+        <div class="child">13s</div> 
+        <div class="child">14s</div> 
+        <div class="child">15</div> 
+    </div>
+</div>
+
+<div class="master1">
+    <h1><code>align-content: space-around</code></h1>
+    <div class="containerbig" id="space-around">
+        
+        
+        <div class="child">1000000000</div>
+        <div class="child">22</div>    
+        <div class="child">3222222</div>
+        <div class="child">4sww</div>
+        <div class="child">5sssssssss</div>    
+        <div class="child">6</div> 
+        <div class="child">7ssss</div>
+        <div class="child">8aaaa</div>    
+        <div class="child">9</div>
+        <div class="child">1s0</div> 
+        <div class="child">11</div>   
+        <div class="child">12</div> 
+        <div class="child">13s</div> 
+        <div class="child">14s</div> 
+        <div class="child">15</div> 
+    </div>
+</div>
+<div class="master1">
+    <h1><code>align-content: space-evenly</code></h1>
+    <div class="containerbig" id="space-evenly2">
+        
+        
+        <div class="child">1000000000</div>
+        <div class="child">22</div>    
+        <div class="child">3222222</div>
+        <div class="child">4sww</div>
+        <div class="child">5sssssssss</div>    
+        <div class="child">6</div> 
+        <div class="child">7ssss</div>
+        <div class="child">8aaaa</div>    
+        <div class="child">9</div>
+        <div class="child">1s0</div> 
+        <div class="child">11</div>   
+        <div class="child">12</div> 
+        <div class="child">13s</div> 
+        <div class="child">14s</div> 
+        <div class="child">15</div> 
+    </div>
+
+</div>
+-->
+
+<!--
+<div class="master">
+    <h1><code> flex-direction: row;</code></h1>
+    <div class="container" id="row">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+
+<div class="master">
+    <h1><code> flex-direction: row-reverse;</code></h1>
+    <div class="container" id="column">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+<div class="master">
+    <h1><code>flex-direction: column;</code></h1>
+    <div class="container" id="row-reverse">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+<div class="master">
+    <h1><code>flex-direction: column-reverse;</code></h1>
+    <div class="container" id="column-reverse">
+        
+        
+        <div class="child">1</div>
+        <div class="child">2</div>    
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>    
+        <div class="child">6</div> 
+        <div class="child">7</div>
+        <div class="child">8</div>    
+        <div class="child">9</div>    
+    </div>
+</div>
+-->
+
+
+
+</main>
+</body>
+</html>

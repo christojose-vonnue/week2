@@ -13,6 +13,11 @@ nav div a:hover{
     color: red;
 }
 
+input:focus-visible{
+    outline: solid 2px red;
+}
+
+
 input[type='checkbox']{
     appearance: none;
     width:18px;

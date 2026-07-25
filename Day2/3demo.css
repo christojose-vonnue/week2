@@ -1,0 +1,61 @@
+body{
+    height: 200vh;
+    margin: 0;
+}
+
+nav{
+    display:flex;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.678); 
+    top:0;
+    z-index: 100;
+    position: sticky;
+    background-color: #ffffff;
+   
+}
+
+.nav-links{
+    margin-left: auto;
+    display: flex;
+    flex:1;
+    justify-content: center;
+    gap:20px;
+    align-items: center;
+    
+}
+
+img{
+    margin-left: 2vw;
+}
+
+.hamburger-btn{
+    display: none;
+    margin: auto;
+}
+
+a:hover{
+    color: rgb(10, 141, 6);
+}
+
+a:focus-visible{
+    outline: solid 2px red;
+    outline-offset: 2px;
+}
+
+.onright{
+    display: flex;
+    padding: 15px;
+    margin-right: 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+@media (max-width:768px){
+    .nav-links{
+        display: none;
+    }
+
+    .hamburger-btn{
+        display: block;
+    }
+}
+

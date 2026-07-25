@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <link href="6style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header><h1>Fill our Details</h1></header>
+    <main>
+    <form>
+        <fieldset class="multiple-flex-rows"> <legend>Address</legend>               
+            </div>
+            <div class="flex-row-2-colum-pair">
+                <label for="addr1">House name : <span class="required">*</span></label>
+                <input type="text" required id="addr1">               
+            </div>
+            <div class="flex-row-2-colum-pair">
+                <label for="addr2">Street name :<span class="required">*</span></label>
+                <input type="text" required id="addr2">
+            </div>
+            <div class="flex-row-2-colum-pair">
+                <label for="addr3">City name :<span class="required">*</span></label>
+                <input type="text" required id="addr3">
+            </div>
+            <div class="flex-row-2-colum-pair">
+                <label for="addr4">Postcode<span class="required">*</span></label>
+                 <input type="text" required id="addr4" Pattern="[0-9]{6}" aria-describedby="condition1">
+            </div>
+            <div class="flex-row-2-colum-pair">
+                 <label for="country_select">Country <span class="required">* </span></label>
+        <select name="countries" id="country_select" required >
+            <!-- Fix: Add this blank placeholder option at the very top -->
+            <option value="">-- Select your country --</option>
+            <option value="India">India</option>
+            <option value="Japan">Japan</option>
+            <option value="UK">UK</option>
+            <option value="UN">UN</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Egypt">Egypt</option>
+            <option value="USA">USA</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Cabo Verde">Cabo Verde</option>
+        </select>
+   
+            </div>
+        </fieldset>
+
+                <fieldset class="multiple-flex-rows"> <legend>Card Details </legend>               
+            </div>
+            <div class="flex-row-2-colum-pair">
+                <label for="cardno">Card Number : </label>
+                <input type="text" required id="cardno" maxlength=16 aria-describedby="condition2">
+                <br><p class="highlight">Card Number must be a maximum length of 16 characters</p>
+             </div>
+            <div class="flex-row-2-colum-pair">
+               <label for="expiry">Expiry month and Year : <span class="required">*</span></label>
+                <input type="month" required id="expiry">
+             </div>
+            <div class="flex-row-2-colum-pair">
+               <label for="cvv">CVV : <span class="required">*</span></label>
+                <input type="password" required id="cvv" pattern="[0-9]{3}" maxlength=4 aria-describedby="tooltip"> 
+                <br> <p class="highlight">3 digits on the back of your card</p>
+
+           </div>
+            <div class="flex-row-2-colum-pair">
+                <label for="notes">Order Notes : <span class="required">*</span></label>
+                
+                <textarea id="notes" maxlength=500 placeholder="Maximum type upto 500 characters"></textarea>
+             </div>
+ 
+        </fieldset>
+
+        <div class="multiple-flex-rows" id="buttons-on-right">
+            <button id="submit-button">Submit</button>
+            <button type="reset" id="cancel-button">Cancel</button>
+        </div>
+
+    </form>
+    </main>
+</body>
+</html>
