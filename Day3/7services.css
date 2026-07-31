@@ -1,0 +1,147 @@
+header nav{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+    min-height: 60px;
+}
+
+header h1{
+    text-align: center;
+}
+
+.navitem{
+    padding-top: 20px;
+    text-align: center;
+    border: solid 1px rgba(128, 128, 128, 0.308);
+}
+
+body{
+    margin: 0px;
+    padding-right: 0%;
+
+}
+
+.dynamic-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    grid-template-areas: "article-one-mvp   article-two-custom    article-three-design";
+    
+    @media (width<900px){
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "article-one-mvp"
+        "article-two-custom"
+        "article-three-design";
+    }
+
+    @media (width<420px){
+        td, th {
+ 
+  padding: 0px;
+}
+
+    }
+}
+.dynamic-cards li{
+    margin-left: 20%;
+    text-align: left;
+    padding-left: 20px;
+    
+}
+
+#article-three-design{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    grid-area: article-three-design;
+    border: solid 1px rgba(128, 128, 128, 0.438);
+}
+
+#article-two-custom{
+     padding-top: 20px;
+      padding-bottom: 10px;
+    grid-area: article-two-custom;
+    border: solid 1px rgba(128, 128, 128, 0.438);
+}
+#article-one-mvp{
+     padding-top: 20px;
+      padding-bottom: 10px;
+    grid-area: article-one-mvp;
+    border: solid 1px rgba(128, 128, 128, 0.438);
+}
+
+/* Featured Section */
+.featured{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "ft-content-side ft-table-side ";
+    border: solid 2px gold;
+
+    @media (width<900px){
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "ft-content-side"
+         "ft-table-side ";
+    }
+}
+
+.ft-table-side{
+    grid-area: ft-table-side;
+    
+
+}
+
+.ft-content-side{
+    grid-area: ft-content-side;
+   
+}
+
+/* C2A */
+
+.C2A{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "C2A-text C2A-form";
+    border: solid 2px gold;
+
+    @media (width<480px){
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "C2A-text "
+         "C2A-form";
+    }
+}
+
+
+
+/* Imported from minimal-css */
+
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgba(128, 128, 128, 0.438);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+ 
+  padding: 10px 20px;
+}
+
+th {
+    
+  background-color: rgba(179, 176, 176, 0.411);
+  color: rgb(0, 0, 0);
+}
+
+td {
+  text-align: center;
+   background-color: rgb(247, 247, 248);
+   color : black;
+}
+caption {
+  padding: 10px;
+  font-size: larger;
+}

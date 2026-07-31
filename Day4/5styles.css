@@ -1,0 +1,267 @@
+header nav ul {
+    list-style-type:none;
+    padding: 0;
+    margin : 0 ; 
+}
+header nav li {display:inline-block;
+                margin-right:15px;}
+
+article hr{ border:none;
+            border-top: 1px dashed #312526;}
+
+body{
+    background-color: black;
+    color: aliceblue;
+}
+
+a{
+    color:aqua
+}
+
+a:hover{
+    color:aquamarine
+}
+
+h1{
+    margin-left : 40vw ;
+}
+hr{border-width: 2px;}
+
+.features em{
+    color:  rgb(235, 167, 59);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.features h3{
+    color : rgb(252, 204, 142);
+}
+
+.testimonials h2{
+    color: rgb(95, 226, 65);
+}
+
+.testimonials h3{
+    color: rgb(197, 228, 181);
+}
+
+footer{
+    margin-left: 40vw;
+    margin-top: 5vw;
+}
+
+header p{
+    text-align: center;
+    text-justify: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+header dl{
+    
+    margin-left: 38vw;
+    margin-right: 10vw; 
+}
+
+#values h2{margin-left: 45vw;}
+
+
+/* Imported from minimal-css */
+
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(183, 134, 229);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  border: 1px solid rgb(144, 117, 170);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(107, 55, 134);
+  color: rgb(246, 245, 247);
+}
+
+td {
+  text-align: center;
+   background-color: rgb(232, 219, 246);
+   color : black;
+}
+
+
+caption {
+  padding: 10px;
+  font-size: larger;
+}
+
+figure {
+            display: inline-block;
+           
+            margin-bottom: 1em;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 20px;
+            
+        }
+figure img{
+    border-radius: 50%;  /* 254 : Circular Radius */
+}
+
+.required {
+    color:rgb(81, 255, 0);
+}
+
+textarea{
+    width:25vw;
+    height:20vw;
+}
+
+fieldset{
+    margin-top: 3vw;
+    margin-left: 35vw;
+    margin-right: 50vw;
+}
+
+.contact{
+        margin-top: 3vw;
+    margin-left: 35vw;
+    margin-right: 0vw;
+
+}
+
+.Icon-row img{
+    border:40px;
+    height:40px;
+}
+
+.Icon-row{
+    display: flex;
+    padding-right: 30px;
+    justify-content: space-evenly;
+    opacity: 0;
+
+}
+.Icon-row:hover{
+    animation-name: bring;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+/**HELP NEEDED**
+
+1. I need to add two distinct animations to same psedo class figure:hover
+2. 
+
+**/
+
+.dev-grid{
+    display: none;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+
+}
+#qa:target{
+    display: grid;
+}
+
+#hide{
+    display: none;
+}
+
+
+.qa-grid{
+    
+    display: none;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+
+
+}
+
+.qa-grid figure:hover,.dev-grid figure:hover{
+    animation-name: box-lift;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+
+}
+
+.filter{
+    margin-left: clamp(10px,30vw,1000px);
+    display: flex;
+    padding-left: 10px;
+    padding-right:10px;
+    justify-content: space-around;
+    width: 30vw;
+}
+
+.filter a{
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 16px;
+    background-color: cyan;
+    color: black;
+    text-align: center;
+}
+
+.filter a:hover{
+    background-color: rgba(255, 255, 255, 0.747);
+}
+
+#dev:target{
+    display: grid;
+}
+
+@keyframes bring {
+
+    100%{
+        opacity: 1.0;
+    }
+    
+}
+@keyframes box-lift {
+
+    100%{
+        
+        box-shadow: 0px 0px 4px 4px tan;
+    }
+
+}
+
+
+@media ( width < 1140px ){
+.dev-grid,.qa-grid{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+footer{
+    margin-left: 30vw;
+}
+.filter{
+    flex-direction: column;
+}
+.filter a{
+    margin-top: 10px;
+}
+}
+
+
+@media ( width < 570px ){
+.dev-grid,.qa-grid{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+footer{
+    margin-left: 15vw;
+}
+}
+

@@ -1,0 +1,166 @@
+@media (prefers-reduced-motion: no-preference){
+.spinner-fragment{
+    width: 20px;
+    height:20px;
+    border-left: solid 3px black;
+    border-radius: 20px;
+    
+}
+
+#on_action{
+    /* animation: spin 1s linear 0s infinite none none; */
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-color: blue;
+    
+
+}
+
+@keyframes spin{
+    25%{
+        border-color: rgba(0, 0, 255, 0.800);
+    }
+
+    50%{
+        border-color: rgba(255, 30, 0, 0.6);
+    }
+    75%{
+        border-color: rgba(255, 30, 0, 0.800);
+    }
+   
+   
+   
+    100%{
+        rotate: 360deg;
+        border-color: blue;
+    }  
+}
+
+/************************************/
+
+
+.skeleton{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 4fr 3fr;
+    background-color: white;
+    gap:15px;
+    padding: 15px;
+    width: 300px;
+    height: 400px;
+    animation: skeleton-animation 2s ease-in-out 0s infinite none none;
+}   
+
+
+.top{
+    background-color: rgba(233, 230, 230, 0.651);
+    
+    border-radius: 20px;
+    animation-name: skeleton-animation; 
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.middle{
+     background-color: rgba(233, 230, 230, 0.651);
+    border-radius: 20px;
+    animation-name: skeleton-animation; 
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.bottom{
+     background-color: rgba(233, 230, 230, 0.651);
+    border-radius: 20px;
+        animation-name: skeleton-animation; 
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes skeleton-animation{
+    0%{
+        background-color: rgba(233, 230, 230, 0.651);
+    }
+    /* 20%{
+        background-color: rgba(233, 230, 230, 0.751);
+    }
+    40%{
+        
+         background-color: rgba(158, 147, 147, 0.751);
+    } */
+    60%{
+        background-color: rgba(190, 187, 187, 0.751);
+    }
+    /* 80%{
+        background-color: rgba(233, 230, 230, 0.651);
+
+    } */
+    100%{
+        background-color: rgba(233, 230, 230, 0.651);
+    }
+}
+
+/*******************************************************/
+
+#bell{
+    width: 200px;
+}
+
+#bell:hover{
+    animation-name: shake_bell;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes shake_bell {
+    20%{
+        rotate: 30deg;
+    }
+
+    40%{
+        rotate: -30deg;
+    }
+    60%{
+        rotate: 15deg;
+    }
+
+    80%{
+        rotate: -15deg;
+    }
+    
+}
+
+#GOAT{
+    width: 400px;
+}
+
+.invisible{
+    opacity: 0;
+}
+
+
+.visible{
+    animation-name: slides;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+
+@keyframes slides {
+    0%{
+        translate: 0 20px;
+        opacity: 0;
+    }
+    100%{
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+}

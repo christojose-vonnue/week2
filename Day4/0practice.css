@@ -1,0 +1,94 @@
+@media screen and (width >= 600px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .col1 {
+    flex: 1;
+    margin-right: 5%;
+  }
+
+  .col2 {
+    flex: 2;
+  }
+}
+
+h1{
+    font-size:2vw;
+}
+
+@media screen and (width >= 600px){
+    h1{
+       font-size:4vw; 
+    }
+}
+
+#one{
+  color: rgb(252, 4, 4);
+  font-size: x-large;
+  animation-name: Apple;
+  animation-duration: 5s;
+}
+
+@keyframes Apple {
+  from{
+    color: blueviolet;
+    translate:0 100vh;
+    scale: 100% 1;
+}
+
+to{
+  color: rgb(25, 23, 27);
+  translate:0 0;
+  scale:100% 1;
+}
+}
+
+#temp{
+  opacity: 0;
+  animation-name: Breaking;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  color: red;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+#two{
+    animation-name: Slide-in;
+    display: flex;
+    animation-iteration-count: infinite;
+    animation-duration: 50s;
+}
+
+@keyframes Slide-in {
+  
+    from{
+      translate: 101vw 0;
+      scale:100% 1;
+    }
+    to{
+      translate: -50vw 0;
+      scale:100% 1;
+    }
+}
+
+@keyframes Breaking{
+  from{
+    display: flex;
+    scale:0%;
+    translate: 0 0;
+    opacity: 0;
+}
+
+to{
+    display: flex;
+    scale:100%;
+    translate: 0 0;
+    opacity: 100;
+}
+  }
+
+
+

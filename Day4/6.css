@@ -1,0 +1,73 @@
+.content{
+
+    border: solid 2px red;
+    overflow: hidden;
+    height: 0px;
+    transition: max-height 1s linear;
+
+    /* border: solid 2px green; */
+}
+
+input[type="checked"]{
+    display: none;
+}
+
+input:checked ~ .content{
+    /* animation-name: height;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: both; */
+    /* animation-direction: alternate; */
+    height: 20px !important;
+    display: block;
+
+}
+
+.radio_content{
+    border : solid 1px green;
+    overflow: hidden;
+    max-height: 0px;
+    width:200px;
+    transition: max-height 1s linear;
+
+}
+
+input:checked ~ .radio_content{
+    max-height: 30px;
+}
+
+/* input[type="radio"]{
+    display: none;
+} */
+.stars {
+margin-right: 90vw;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+}
+
+/* Hide inputs */
+.stars input {
+position: absolute;
+opacity: 0;
+}
+
+/* Empty star */
+.stars label::before {
+  content: "\2606";
+}
+
+
+/* Filled star for checked + previous siblings */
+.stars input:checked ~ label::before {
+  content: "\2605";
+}
+
+.stars input[type="radio"]:hover ~ label::before{
+    content: "\2605"
+}
+
+
+/* .stars input:checked ~ label::after {
+  content: "\2606";
+} */

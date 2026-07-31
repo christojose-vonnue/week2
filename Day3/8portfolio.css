@@ -1,0 +1,164 @@
+body{
+    min-height: 100%;
+    margin : 0;
+}
+
+.master-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+
+    width: 100vw;
+    height:100vh;
+        }
+
+
+#one{
+    grid-row: span 2;
+    background-color: black;
+    grid-column: span 2;
+}
+
+#two{
+    background-color: hotpink;
+    grid-row: span 2;
+}
+
+#three{
+    background-color: darkblue;
+    grid-row: span 2;
+}
+
+#four{
+    background-color:lightsalmon;
+    grid-column: span 2;
+}
+
+#five{
+    background-color: darkblue;
+    grid-column: span 2;
+}
+
+#six{
+    background-color: black;
+    grid-row: span 2;
+     grid-column: span 2;
+}
+
+.flexbox-Ronaldo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 50%;
+
+}
+.flexbox-Ronaldo p,h1,h2{
+    color : white;
+}
+.featured-1 h1{
+    margin: 20px;
+    height : 50px;
+    text-align: center;
+    
+}
+h2{
+    width: 250px;
+    margin: 20px;
+}
+
+
+.featured-1 p{
+    font-size: x-large;
+    font-family: "Custom";
+    word-spacing: 2px;
+}
+
+@font-face{
+    font-family: 'Custom-1';
+    src: url(Beautiful\ Malera\ Italic\ Demo.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: 'Custom';
+    src: url(Mestika.ttf) format("truetype");
+}
+
+.overlay{
+    position: absolute;
+    bottom: 100%;
+    width:50%;
+    height: 50%;
+    left:0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.featured-1:hover .overlay{
+    bottom: 50%;
+    height: 50%;
+
+}
+
+.overlay-text{ /* This is for the text displayed in the hidden overlay div */
+    padding: 25%;
+    color: white;
+    font-size: xx-large;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.overlay-text a{
+    color: rgb(137, 184, 224);
+}
+
+#rono-image{
+    display: block;
+}
+
+.non-featured-1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.non-featured-1 h1,h2{
+    margin: 5px;
+    text-align: center;
+}
+
+.non-featured-1 h2{
+    color: rgba(0, 0, 0, 0.61);
+}
+
+.messi-overlay{
+    width:25%;
+    height: 50%;
+    background-color: rgba(248, 245, 247, 0.74);
+    
+    position: absolute;
+    transition: .5s ease;
+    opacity: 0;
+
+    
+}
+
+.non-featured-1:hover .messi-overlay{
+
+    opacity: 1;
+}
+
+.non-featured-1 div{
+    
+    text-align: center;
+    font-size: x-large;
+}
+.non-featured-1 div h1{
+    color: rgba(0, 0, 0, 0.829);
+}
+.non-featured-1 div a{
+    color : rgba(255, 20, 145, 0.685)
+}

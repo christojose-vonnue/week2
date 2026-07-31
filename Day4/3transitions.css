@@ -1,0 +1,182 @@
+.id-box{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(241, 156, 156);
+    margin-bottom: 30px;
+
+}
+
+#demo1{
+    animation-name : ease-in-animation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#demo2{
+    animation-name : ease-in-animation;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#demo3{
+    animation-name : ease-in-animation;
+    animation-timing-function: ease-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#demo4{
+    animation-name : ease-in-animation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#demo5{
+    animation-name : ease-in-animation;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background-color: black;
+}
+
+#btn-cubic-bezier:hover{
+    animation-name: Bounce;
+    animation-timing-function: cubic-bezier(0.5,-0.5,1,1.5);   
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Bounce {
+    0%{
+        opacity: 0.5;
+        scale: 0.8;
+        translate: 0 0;
+    }
+    /* 20%{
+        opacity: 0.8;
+        scale: 1;
+    } */
+    40%{
+        opacity: 1;
+        scale: 0.75;
+        translate: 6vw -6vh;
+    }
+    60%{
+        opacity: 0.5;
+        scale: 0.4;
+        
+    }
+    80%{
+        opacity: 1.0;
+        scale: 2.0;
+        
+    }
+    100%{
+        opacity: 0.5;
+        scale:1.0;
+        translate: 0 0;
+    }
+}
+
+@keyframes ease-in-animation {
+    from{
+        translate: 0 0;
+    }
+    to{
+       translate: 15vw 0;
+   }
+}
+
+/***********************STAGGERED CARDS ANIMATION******************/
+
+.stagger{
+    width: 200px;
+    height: 40px;
+}
+
+#layer1{
+    background-color: blue;
+}
+#layer2{
+    background-color: rgba(0, 0, 255, 0.466);
+
+}
+#layer3{
+    background-color: rgba(0, 0, 255, 0.199);
+    color: black;
+
+
+}
+
+.hover-staggered:hover #layer2{
+    animation-name: staggered_layer2;
+    animation-duration:1s;
+    animation-timing-function: ease;
+   
+}
+
+.hover-staggered:hover #layer3{
+    animation-delay: 1.2s;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-name: staggered_layer3;
+    animation-fill-mode: backwards;
+
+}
+
+
+
+@keyframes staggered_layer2{
+    0%{
+        translate: 0 -40px;
+        opacity: 0;
+    }
+    100%{
+        translate: 0 0px;
+        opacity: 1.0;
+    }
+}
+
+@keyframes staggered_layer3{
+    0%{
+        translate: 0 -80px;
+        opacity: 0;
+    }
+    100%{
+        translate: 0 0px;
+        opacity: 1.0;
+    }
+}
+
+
+/*********************** FOCUS-OUTLINE ******************/
+
+.ring-input {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+ 
+}
+
+.ring-input:focus {
+  border-color: #6366f1;
+  animation: focus-ring 1.2s cubic-bezier(0.4, 0, 0.6, 1) 3;
+}
+
+@keyframes focus-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
+}
+
+/*********************** FOCUS-RADIO ******************/
+
+

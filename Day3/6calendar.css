@@ -1,0 +1,143 @@
+.weekday-day-grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(5,1fr);
+    
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    border-right: solid 1px rgba(128, 128, 128, 0.329);
+
+
+}
+.total-day-grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+    background-color: white;
+    
+    height: fit-content;
+    width: fit-content;
+    grid-column: 2/-1;
+    grid-row :2/-1;
+    
+}
+.month-header-div{
+    border-right: solid 1px rgba(128, 128, 128, 0.329);
+    border-bottom: solid 1px rgba(128, 128, 128, 0.329);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 40px;
+    font-size: x-large;
+    font-weight: 700;
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+
+#eventA{
+    
+    background-color: antiquewhite;
+}
+
+.day-div{
+    height: 60px;
+    width: 100px;
+    
+    border-radius: 999px;
+    background-color: rgba(255, 255, 254, 0);
+    text-align: center;
+    padding-top: 40px;
+}
+
+#curr{
+    background-color: cornflowerblue;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+}
+
+#one{
+    grid-column: 7/7 ;
+}
+
+.day-header-div{
+    height: 60px;
+    width: 60px;
+    border: dashed 1px blue;
+    gap:20px;
+    margin:20px;
+    background-color: rgb(255, 241, 116);
+}
+
+.week-no-div{
+    margin-top: 20px;
+    height: 60px;
+    width: 100px;
+    text-align: center;
+    
+    
+    
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 20px;
+    font-size: large;
+    font-weight: 700;
+    
+}
+
+.master-div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr);
+    
+    background-color: rgb(236, 241, 247);
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    border: solid 1px rgba(128, 128, 128, 0.541);
+    
+}
+
+.day-type-day-grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(1,1fr);
+    border-bottom: solid 1px rgba(128, 128, 128, 0.329);
+    
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    width: fit-content;
+
+
+}
+
+@media (width<480px){
+
+    .day-type-day-grid{
+        display: none;
+    }
+
+    .total-day-grid{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        border: solid 2px red;
+    }
+
+    .weekday-day-grid{
+        display: none;    
+    }
+    .month-header-div{
+        display: none;
+    }
+    .master-div{
+        display: grid;  
+
+    }
+    .day-div{
+        grid-column: 1/-1;
+    }
+
+    
+}

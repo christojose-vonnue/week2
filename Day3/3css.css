@@ -1,0 +1,157 @@
+.Magazine{
+    display: grid;
+    border: solid 2px red;
+   
+    grid-template-rows: repeat(5,100px);
+    width: 600px;
+    height : 600px;
+    justify-content: stretch;
+    align-content: stretch;
+    grid-template-areas: 
+    "header     header  navbar  navbar"
+    "sidebar    Hero    Hero    AD"
+    "sidebar    Art1    Art1    AD"
+    "Art2       Art2    Art2    Art2"
+    "Foot       Foot    Foot    Foot"
+    ;
+
+    grid-auto-flow: dense;
+
+    gap : 10px;
+}
+
+.itm{
+    min-width:80px;
+    min-height: 80px;
+    background-color: rgb(72, 201, 240);
+}
+
+#header{
+    grid-area: header;
+    background-color: tomato;
+}
+
+#navbar{
+    grid-area: navbar;
+    background-color: rgb(255, 194, 183);
+}
+
+#sidebar{
+    grid-area: sidebar;
+    background-color: cornflowerblue;
+}
+
+#Art2{
+    grid-area: Art2;
+     background-color: rgb(100, 76, 14);
+}
+
+#footer{
+    grid-area: Foot;
+}
+
+#hero{
+    grid-area: Hero;
+    background-color: red
+
+}
+
+#Art1{
+    grid-area: Art1;
+    background-color: goldenrod;
+
+}
+#ad{
+    grid-area: AD;
+    background-color: rgb(46, 114, 241);
+
+}
+
+@media (width<=900px){
+    .Magazine{
+    display: grid;
+    border: solid 2px rgb(255, 0, 212);
+   
+    grid-template-rows: repeat(10,100px);
+    width: 600px;
+    height : 1200px;
+    justify-content: stretch;
+    align-content: stretch;
+    grid-template-areas: 
+    "header     header"
+    "navbar  navbar"
+    "AD     AD"
+    "Hero    Hero" 
+    "sidebar    Art1"
+    "sidebar    Art1"
+    "Art2     Art2"
+    "Art2    Art2"
+    "Foot     Foot"
+    "Foot    Foot"
+    ;
+
+    grid-auto-flow: dense;
+
+    gap : 10px;
+}
+}
+
+@media (width<=600px){
+
+    .Magazine{
+
+    display: grid;
+
+    border: solid 2px rgb(0, 225, 255);
+
+   
+
+    grid-template-rows: repeat(20,100px);
+
+    min-width: 600px;
+
+    height : 1800px;
+
+    justify-content: stretch;
+
+    align-content: stretch;
+
+    grid-template-areas: 
+
+    "header"     
+    "header"
+    "navbar"  
+    "navbar"
+    "AD"     
+    "AD"
+    "Hero"    
+    "Hero" 
+    "sidebar"    
+    "sidebar"    
+    "Art1"
+    "Art1"
+    "Art2"    
+    "Art2"
+    "Art2"    
+    "Art2"
+    "Foot"     
+    "Foot"
+    "Foot"    
+    "Foot"
+
+    ;
+
+
+
+    grid-auto-flow: dense;
+
+
+
+    gap : 10px;
+
+}
+
+}
+
+
+

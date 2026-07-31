@@ -1,0 +1,62 @@
+h1{
+    font-size: clamp(2.4rem, 5vw + 1rem, 5.6rem);
+}
+
+h2{
+    font-size: clamp(60px,8vw,250px);
+}
+
+h3{
+    font-size: clamp(70px,8vw,200px);
+}
+
+h4{
+    font-size: clamp(80px,8vw,160px);
+}
+h5{
+    font-size: clamp(90px,8vw,140px);
+}
+h6{
+    font-size: clamp(100px,8vw,120px);
+}
+
+p{
+    padding: clamp(1rem, 3vw, 3rem);
+    word-spacing: clamp(1rem, 3vw, 3rem);
+}
+
+
+
+#Responsive-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    container-type: inline-size;
+    container-name: Responsive_grid;
+}
+#blue-yellow{
+    background-color: blue;
+    color: yellow;
+    font-size: larger;
+}
+
+#pink-black{
+    background-color: hotpink;
+    color: black;
+    font-size: larger;
+}
+@container ( width < 800px ){
+#blue-yellow{
+    background-color: yellow;
+    color: blue;
+    text-align: center;
+    font-size: small;
+}
+
+#pink-black{
+    background-color: black;
+    color: hotpink;
+    text-align: end;
+    font-size: small;
+}
+}

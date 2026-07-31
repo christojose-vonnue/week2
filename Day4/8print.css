@@ -1,0 +1,10 @@
+@media print{
+    header,a,.testimonials{
+        display: none !important;
+    }
+
+    footer{
+        text-align: left;
+        font-size: larger;
+    }
+}
